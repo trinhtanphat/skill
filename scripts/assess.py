@@ -55,7 +55,7 @@ def classify(target: str, forced: str | None = None) -> tuple[str, str]:
 
     t = target.strip()
 
-    if t.lower() in LOG_SENTINELS:
+    if t.lower() in LOG_SENTINELS and t != ".":
         return "winlog", "log sentinel / local host -> event-log hunt"
 
     if "://" in t:

@@ -203,7 +203,7 @@ def main() -> int:
     ok = sum(1 for s in steps if s.rc == 0)
     print(f"\n[+] Done: {ok}/{len(steps)} step(s) OK.")
     print(f"[+] Consolidated report: {report}")
-    return 0
+    return 0 if ok == len(steps) else 1
 
 
 if __name__ == "__main__":
